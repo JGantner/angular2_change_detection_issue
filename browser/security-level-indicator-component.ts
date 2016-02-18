@@ -14,7 +14,7 @@ export class SecurityLevelIndicator {
             // set interval needed by angular to trigger the change detection
         }, 1000);
         ipcRenderer.on('hardware-event', (event) => {
-            console.log(event);
+            console.log('new hardware event:', event);
             this.hardwarePresent = true;
             this.changeDetectorRef.markForCheck();
         });
