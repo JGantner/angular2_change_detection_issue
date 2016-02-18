@@ -1,0 +1,38 @@
+<html>
+<head>
+  <title>Change detection issue demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- 1. Load libraries -->
+  <!-- IE required polyfills, in this exact order -->
+  <script src="../node_modules/es6-shim/es6-shim.min.js"></script>
+  <script src="../node_modules/systemjs/dist/system-polyfills.js"></script>
+
+  <script src="../node_modules/angular2/bundles/angular2-polyfills.js"></script>
+  <script>
+    ipcRenderer = require('electron').ipcRenderer;
+  </script>
+  <script src="../node_modules/systemjs/dist/system.src.js"></script>
+  <script src="../node_modules/rxjs/bundles/Rx.js"></script>
+  <script src="../node_modules/angular2/bundles/angular2.dev.js"></script>
+
+  <!-- 2. Configure SystemJS -->
+  <script>
+    System.config({
+      defaultJSExtensions: true,
+      paths: {
+        '*': '*.js',
+        'angular2/*': '../node_modules/angular2/*.js',
+        'rxjs/*': '../node_modules/rxjs/*.js'
+      }
+    });
+    System.import('../dist/browser/main');
+  </script>
+</head>
+
+<!-- 3. Display the application -->
+<body>
+<my-app>Loading...</my-app>
+</body>
+
+</html>

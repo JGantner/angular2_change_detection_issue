@@ -1,0 +1,28 @@
+{
+  "name": "angular_change_detection_issue",
+  "version": "1.0.0",
+  "description": "Example App to illustrate the change detection issue",
+  "main": "app/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron app/index.js",
+    "prestart": "tsc || sleep 2"
+  },
+  "keywords": [
+    "electron",
+    "angular2",
+    "ipc",
+    "change_detection"
+  ],
+  "author": "Julien Gantner <mail@julien-gantner.de> (http://www.julien-gantner.de)",
+  "license": "MIT",
+  "dependencies": {
+    "angular2": "2.0.0-beta.6",
+    "electron-prebuilt": "0.36.7",
+    "es6-shim": "0.33.13",
+    "reflect-metadata": "0.1.2",
+    "rxjs": "5.0.0-beta.0",
+    "systemjs": "0.19.22",
+    "zone.js": "0.5.14"
+  }
+}
